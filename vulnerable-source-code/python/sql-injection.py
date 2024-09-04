@@ -21,3 +21,5 @@ def show_user():
         User.objects.annotate(RawSQL("insert into names_file ('name') values ('%s')" % username))
         User.objects.raw("insert into names_file ('name') values ('%s')" % username)
         User.objects.extra("insert into names_file ('name') values ('%s')" % username)
+
+##
